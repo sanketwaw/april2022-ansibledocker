@@ -1,0 +1,10 @@
+---
+- hosts: docker-server
+  become: true
+  tasks:
+     - name: removing docker container
+       shell: docker rm webapp -f
+     - name: remove docker images
+       shell: docker image rm -f sanketwawale/april2022dockercontainer:latest
+     - name: create docker container
+       shell: docker run -itd --name webapp -p 80:80 sanketwawale/april2022dockercontainer:latest
