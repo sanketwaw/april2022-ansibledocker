@@ -7,4 +7,4 @@
      - name: remove docker images
        shell: docker image rm -f sanketwawale/april2022dockercontainer:latest
      - name: create docker container
-       shell: docker run -itd -p 80:80 --name webapp sanketwawale/april2022dockercontainer:latest
+       shell: docker run -itd -p 8090:80 --name webapp sanketwawale/april2022dockercontainer:latest
